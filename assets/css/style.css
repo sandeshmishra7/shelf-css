@@ -1,0 +1,611 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+
+/* Utility Classes Start  */
+
+.para {
+  color: #3E4859;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Utility Classes end  */
+
+header {
+  background: url('https://www.dummyimage.com/1920x800/b0b9d9/fff') no-repeat center center/cover;
+  border-bottom: 8px solid #246599;
+}
+
+header .wrapper {
+  width: 100%;
+}
+
+h1 {
+  padding: 0 7%;
+}
+
+h1 a {
+  text-indent: -9999px;
+}
+
+h1 img {
+  float: left;
+  margin-top: 32%;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #00000080;
+  padding: 0 6%;
+  margin-top: 18%;
+}
+
+.nav-list a {
+  color: #fff;
+  padding: 22px 0;
+  font-size: 23px;
+}
+
+.nav-list .active {
+  color: #7399b8;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/
+
+/*=================================
+  main styling starts here
+=================================*/
+
+/* book section start */
+
+.book {
+  padding: 80px 0;
+}
+
+.book h2 {
+  color: #8C858D;
+  font-size: 30px;
+  padding-bottom: 21px;
+}
+
+.img-list-items {
+  display: none;
+}
+
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.active-items {
+  flex-basis: 23%;
+  padding: 0 20px 25px 0;
+  text-align: center;
+}
+
+.active-items:nth-child(4n) {
+  padding-right: 0;
+}
+
+.active-items h3 {
+  padding: 18px 0;
+}
+
+.book h2 {
+  margin-left: 17px;
+}
+
+.book h2+.para {
+  max-width: 98%;
+  margin-left: 17px;
+}
+
+.btn-list {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-list-item a {
+  color: #3E4859;
+  padding: 15px 20px;
+  font-size: 18px;
+  margin-right: 7px;
+  background-color: #EDEDED;
+  transition: .3s all ease;
+}
+
+.btn-list-item:first-child a {
+  background-color: #24659A;
+  color: #fff;
+}
+
+/* book section end */
+
+/* help list start */
+
+.help {
+  margin-bottom: 70px;
+}
+
+.help .wrapper {
+  background-color: #24659A;
+  padding: 60px 0;
+  width: 89%;
+}
+
+.help-item-left {
+  margin-left: 11%;
+  margin-top: 2%;
+}
+
+.help-item-left img { border-radius: 50%; }
+
+.help .para,
+.help h4 {
+  color: #fff;
+}
+
+.help-list {
+  display: flex;
+  gap: 6%;
+}
+
+.help .para {
+  max-width: 85%;
+  padding: 15px 0 23px;
+}
+
+.btn a {
+  color: #fff;
+  padding: 14px 3%;
+  border: 1px solid #fff;
+  transition: .3s ease all;
+}
+
+.help h4 {
+  font-size: 33px;
+}
+
+/* help list end */
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/
+
+footer {
+  background-color: #2f2f2f;
+  color: #ebe9e7;
+}
+
+.footer-para {
+  padding: 22px 0;
+  text-align: center;
+}
+
+/*=================================
+  footer styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (min-width: 995px) {
+
+  /* Hover Effects start */
+
+  .nav-list a:hover {
+    color: #000;
+    transition: .3s ease all;
+  }
+
+  .btn-list-item a:hover {
+    background-color: #24659A;
+    color: #fff;
+  }
+
+  .btn a:hover {
+    background-color: #fff;
+    color: #24659A;
+  }
+
+  /* Hover effects end */
+}
+
+@media only screen and (max-width: 995px) {
+
+  /* header styling start */
+
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    padding: 0;
+    padding: 5px 20px;
+  }
+
+  h1 img {
+    margin-top: 10%;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .nav-list a {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hamburger {  
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 10%;
+    transition: .3s all ease;
+    text-indent: -999999px;
+    margin-right: 50px;
+  }
+
+  .nav-list {
+    display: none;
+    text-align: center;
+    position: absolute;
+    background: #000;
+    width: 17%;
+    top: -9%;
+    right: 0;
+    padding: 10px 0;
+  }
+
+  .nav-list li {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    margin: 20px 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff;
+    transition: .3s all ease;
+  }
+
+  .nav-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .hamburger:hover+.nav-list {
+    display: block;
+  }
+
+  nav:hover .nav-list {
+    display: block;
+  }
+
+  .nav-list a:hover {
+    color: #808080;
+    transition: .3s all ease;
+  }
+
+  /* header styling end */
+
+  /* book section start */
+
+  .book {
+    padding: 35px 0;
+  }
+
+  .book img {
+    width: auto;
+  }
+
+  .book {
+    text-align: center;
+  }
+
+  .book h2 {
+    font-size: 20px;
+  }
+
+  .para {
+    font-size: 15px;
+  }
+
+  .img-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .active-items {
+    padding: 0 0 20px;
+  }
+
+  .active-items:last-child {
+    background-color: red;
+  }
+
+  .btn-list {
+    margin-top: 0;
+  }
+
+  .btn-list-item a {
+    font-size: 15px;
+  }
+
+  /* book section end */
+
+  /* help section start */
+
+  .help .wrapper {
+    padding: 50px 0;
+  }
+
+
+  .help-list {
+    flex-direction: column;
+  }
+
+  .help-list li {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .help .para {
+    max-width: 100%;
+  }
+
+  .help-item-right {
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .help h4 {
+    font-size: 22px;
+  }
+
+  .help .para {
+    font-size: 15px;
+  }
+
+  .btn a {
+    font-size: 12px;
+    padding: 10px 3%;
+  }
+
+  /* help section end */
+
+  /* footer section start */
+
+  .footer-para {
+    font-size: 12px;
+  }
+
+  /* footer section end */
+}
